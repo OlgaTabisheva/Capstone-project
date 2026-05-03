@@ -1,3 +1,5 @@
+import '../scss/main.scss';
+
 import { renderHeader } from './../ts/components/header';
 import { renderBanner } from './../ts/components/banner';
 import { renderProducts } from './../ts/components/products';

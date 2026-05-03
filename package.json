@@ -10,7 +10,7 @@
     "compile": "sass src/scss:dist/css",
     "lint": "eslint src/**/*.ts && stylelint src/**/*.scss",
     "lint:fix": "eslint src/**/*.ts -fix && stylelint src/**/*.scss -fix",
-    "dev": "vite src"
+    "dev": "vite"
   },
   "repository": {
     "type": "git",

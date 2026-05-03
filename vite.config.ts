@@ -1,0 +1,20 @@
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+    root: 'src',
+    base: './',
+    build: {
+        outDir: '../dist',
+        emptyOutDir: true,
+        rollupOptions: {
+            input: {
+                main: 'index.html',
+                about: 'html/about.html',
+                cart: 'html/cart.html',
+                catalog: 'html/catalog.html',
+                contact: 'html/contact.html',
+                userLogIn: 'html/userLogIn.html',
+            },
+        },
+    },
+});
