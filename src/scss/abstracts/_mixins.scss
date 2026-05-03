@@ -1,0 +1,88 @@
+@use "variables";
+
+@mixin text-h1-black {
+  font-family: variables.$font-montserrat;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@mixin text-h2-black {
+  font-family: variables.$font-montserrat;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@mixin text-h3-bold {
+  font-family: variables.$font-montserrat;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+
+@mixin text-link-bold {
+  font-family: variables.$font-montserrat;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@mixin text-link-SemiBold {
+  font-family: variables.$font-montserrat;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@mixin text-normal {
+  font-family: variables.$font-montserrat;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+@mixin text-helvetica-medium {
+  font-family: variables.$font-helvetica;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+}
+
+@mixin text-helvetica-bold {
+  font-family: variables.$font-helvetica;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+}
+
+@mixin text-inter-bold {
+  font-family: variables.$font-inter;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1;
+}
+
+
+@mixin text-inter-bold {
+  font-family: variables.$font-inter;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1;
+}
+
+@mixin text-SF-bold {
+  font-family: variables.$font-sf-pro;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0%;
+}

@@ -1,0 +1,20 @@
+  @use '../abstracts/variables';
+  @use '../abstracts/mixins';
+
+  .btn {
+    @include mixins.text-h3-bold;
+    font-size: 18px;
+    display: inline-block;
+    background-color: variables.$purple;
+    color: variables.$white;
+    margin: 0;
+    padding: 14px 28px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }

@@ -1,0 +1,265 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.header {
+  
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: variables.$white;
+  margin: 0 auto;
+  padding: 0;
+
+  &_top {
+    max-width: 1313px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 48px 187px 24px 205px;
+    margin: 0;
+
+    @media (max-width: 1440px) {
+      padding: 48px auto 24px auto;
+      max-width: 1000px; 
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      max-width: 700px;
+
+    }
+
+    @media (max-width: 768px) {
+
+      max-width: 400px;
+     
+      align-items: center;
+      padding: 15px 20px;
+    }
+  }
+
+
+&_socials {
+  display: flex;
+  gap: 25px;
+}
+
+&_social {
+  color: variables.$black;
+
+  &:hover {
+    color: variables.$purple;
+  }
+}
+
+&_social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+&_logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 13.5px;
+}
+
+&_logo-text {
+  @include mixins.text-h3-bold;
+  color: variables.$purple;
+  white-space: nowrap;
+  font-size: 30px;
+}
+
+&_logo-wrapper {
+  background-color: variables.$purple;
+  border-radius: 5px;
+}
+
+&_icon {
+  width: 30px;
+  height: 33px;
+}
+
+&_user-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+&_action-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+&_cart {
+  position: relative;
+
+  &-count {
+    @include mixins.text-link-SemiBold;
+    visibility: hidden;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: variables.$white;
+    color: variables.$purple;
+    border: 2px solid variables.$purple;
+    padding: 3px 6px;
+    border-radius: 50%;
+    z-index: 1;
+
+    &-active {
+      visibility: visible;
+    }
+  }
+}
+
+&_burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1100;
+
+  span {
+    width: 100%;
+    height: 3px;
+    background-color: variables.$purple;
+    transition: 0.3s;
+  }
+
+  &-active {
+    span:nth-child(1) {
+      transform: translateY(8.5px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-8.5px) rotate(-45deg);
+    }
+  }
+}
+
+&_bottom {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid RGB(114, 113, 116, 0.2);
+  background-color: variables.$white;
+}
+
+&_nav-list {
+  display: flex;
+  list-style: none;
+  gap: 29px;
+  margin: 29px 0 24px;
+}
+
+&_link {
+  @include mixins.text-link-bold;
+  text-decoration: none;
+  color: variables.$black;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: variables.$purple;
+  }
+
+  &-active {
+    color: variables.$purple;
+  }
+}
+
+&_arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid variables.$black;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+}
+
+@media (max-width: 1440px) {
+  .header {
+    &_top {
+      padding: 40px 100px 20px 100px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    &_top {
+      padding: 30px 50px 15px 50px;
+    }
+
+    &_logo-text {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &_top {
+      padding: 15px 20px;
+      align-items: center;
+    }
+
+    &_socials {
+      display: none;
+    }
+
+    &_burger {
+      display: flex;
+    }
+
+    &_bottom {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: variables.$white;
+      border-top: 1px solid RGB(114, 113, 116, 0.2);
+      padding: 20px 0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+      &-active {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &_nav-list {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      gap: 20px;
+    }
+
+    &_logo-text {
+      font-size: 20px;
+    }
+
+    &_icon {
+      width: 24px;
+      height: 26px;
+    }
+  }
+}

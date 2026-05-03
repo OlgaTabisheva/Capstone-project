@@ -1,0 +1,7 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "color-hex-length": "short",
+    "no-duplicate-selectors": true
+  }
+}

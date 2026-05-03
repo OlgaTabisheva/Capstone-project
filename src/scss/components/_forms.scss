@@ -1,0 +1,52 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.feedback_form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.feedback_field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.feedback_label {
+    @include mixins.text-h3-bold;
+    font-size: 18px;
+    color: variables.$black;
+}
+
+.feedback_input,
+.feedback_textarea {
+    max-width: 630px;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(variables.$purple, 0.5);
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.feedback_textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.feedback_btn {
+    align-self: flex-start;
+    background-color: variables.$purple;
+    color: variables.$white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+

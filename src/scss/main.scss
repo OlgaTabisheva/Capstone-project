@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    place-content: center;
+}
+
+.main {
+  
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,122 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+        display: flex;
+    }
+
+    &_content {
+    
+        background-color: variables.$white;
+        padding: 40px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 340px;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    &_close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        color: variables.$brown;
+        line-height: 1;
+
+        &:hover {
+            color: variables.$purple;
+        }
+    }
+
+    &_title {
+        @include mixins.text-h2-black;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    &_form {
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &_field {
+        max-width: 340px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: relative;
+    }
+
+    &_label {
+        @include mixins.text-normal;
+        font-size: 14px;
+        color: variables.$black;
+    }
+
+    &_input {
+        @include mixins.text-normal;
+        padding: 12px 15px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+
+        &:focus {
+            outline: none;
+            border-color: variables.$purple;
+        }
+    }
+
+    &_toggle-pass {
+        border: none;
+        position: absolute;
+        right: 15px;
+        bottom: 8.5px;
+        cursor: pointer;
+        font-size: 12px;
+        background-color: variables.$white;
+        color: variables.$medium-gray;
+        font-weight: bold;
+        user-select: none;
+    }
+
+    &_btn {
+        @include mixins.text-link-bold;
+        background-color: variables.$purple;
+        color: variables.$white;
+        border: none;
+        padding: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &_error {
+        color: red;
+        font-size: 12px;
+        margin-top: -15px;
+        display: none;
+    }
+}

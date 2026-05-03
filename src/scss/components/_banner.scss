@@ -1,0 +1,171 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+
+.banner {
+  position: relative;
+  background-color: variables.$white;
+
+  &_hero {
+    background-color: variables.$light-gray;
+    padding: 120px 0 116px;
+
+    @media (max-width: 1024px) {
+      padding: 100px 0;
+    }
+
+    @media (max-width: 768px) {
+      padding: 50px 0;
+    }
+  }
+
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 1440px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      flex-direction: column;
+      align-content: center;
+      text-align: center;
+    }
+  }
+
+  &_content {
+    max-width: 480px;
+
+    @media (max-width: 1024px) {
+      max-width: 350px;
+    }
+
+
+  }
+
+  &_title {
+    @include mixins.text-h1-black;
+    margin: 0;
+    padding: 0;
+  }
+
+  &_description {
+    @include mixins.text-normal;
+    margin: 30px 0;
+    color: variables.$brown;
+    line-height: 1.4;
+  }
+
+
+
+  &_image-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+  }
+
+  &_main-img {
+    max-width: 650px;
+
+    height: auto;
+
+    @media (max-width: 1024px) {
+      max-width: 350px;
+    }
+
+
+  }
+
+
+  &_promo {
+    margin-top: -100px;
+    position: relative;
+    z-index: 5;
+  }
+
+  &_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &_card {
+    padding: 50px;
+    min-height: 400px;
+    background-color: variables.$white;
+
+  }
+
+
+
+  &_card-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/Homepage/suitcases main banner.png');
+    background-size: cover;
+    background-position: center;
+    color: variables.$white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &_card-title {
+    @include mixins.text-h2-black;
+    margin: 0;
+    color: variables.$black
+  }
+
+  &_card-title1 {
+    @include mixins.text-h2-black;
+    margin: 7px 0 0 0;
+    color: variables.$black
+  }
+
+  &_card-text {
+    @include mixins.text-normal;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: variables.$brown;
+  }
+
+  &_card-text-white {
+    color: variables.$white;
+  }
+
+  &_user {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 30px;
+  }
+
+  &_user-avatar {
+    width: 85px;
+    height: 93px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &_user-name {
+    @include mixins.text-h3-bold;
+    font-size: 20px;
+    margin: 0 0 7px 0;
+
+  }
+
+  &_user-role {
+    @include mixins.text-normal;
+    font-size: 13px;
+    color: variables.$black;
+    margin: 0;
+  }
+
+}

@@ -1,0 +1,122 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.search-filter {
+  max-width: 1200px;
+  padding: 0;
+  margin: 86px auto 36px auto;
+
+  @media (max-width: 1440px) {
+    max-width: 1000px;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 900px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 500px;
+  }
+
+  &_icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    @media (max-width: 768px) {
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &_info {
+    @include mixins.text-normal;
+    font-size: 16px;
+    color: variables.$brown;
+  }
+
+  &_actions {
+    display: flex;
+    gap: 50px;
+  }
+
+  &_select {
+    width: 202px;
+
+    @include mixins.text-normal;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid variables.$light-brown;
+    color: variables.$brown;
+    background-color: variables.$white;
+    outline: none;
+    cursor: pointer;
+    text-align: start;
+  }
+
+  &_search {
+
+    position: relative;
+    border: 1px solid variables.$light-brown;
+    display: flex;
+  }
+
+  &_input {
+    @include mixins.text-normal;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    width: 200px;
+  }
+
+  &_search-btn {
+    background: none;
+    border: none;
+    padding-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_filters {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  &_select-small {
+    width: auto;
+    @include mixins.text-normal;
+    font-size: 14px;
+    padding: 6px 10px;
+    border: 1px solid variables.$light-brown;
+    color: variables.$brown;
+    background-color: variables.$white;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &_checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    @include mixins.text-normal;
+    font-size: 14px;
+    color: variables.$brown;
+
+    input {
+      cursor: pointer;
+    }
+  }
+}
