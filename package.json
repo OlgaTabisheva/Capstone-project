@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build",
+    "build": "vite build src",
     "ts-compile": "npx tsc",
     "compile": "sass src/scss:dist/css",
     "lint": "eslint src/**/*.ts && stylelint src/**/*.scss",
     "lint:fix": "eslint src/**/*.ts -fix && stylelint src/**/*.scss -fix",
-    "dev": "vite"
+    "dev": "vite src"
   },
   "repository": {
     "type": "git",
