@@ -8,12 +8,12 @@ export default defineConfig({
         emptyOutDir: true,
         rollupOptions: {
             input: {
-                main: 'index.html',
-                about: 'html/about.html',
-                cart: 'html/cart.html',
-                catalog: 'html/catalog.html',
-                contact: 'html/contact.html',
-                userLogIn: 'html/userLogIn.html',
+                main: 'src/index.html',
+                about: 'src/html/about.html',
+                cart: 'src/html/cart.html',
+                catalog: 'src/html/catalog.html',
+                contact: 'src/html/contact.html',
+                userLogIn: 'src/html/userLogIn.html',
             },
         },
     },
